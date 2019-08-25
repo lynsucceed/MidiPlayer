@@ -34,10 +34,10 @@ void MIDImessage(int command,int MIDInote,int MIDIvelocity){
 //演奏MIDI
 void playMidi(int note,int speed)
 {
-	MIDImessage(noteON,note,velocity); //演奏MIDI
-    delay(speed-deltatime); //延时speed ms
-	MIDImessage(noteOFF,note,velocity); 
-    delay(deltatime);
+   MIDImessage(noteON,note,velocity); //演奏MIDI
+   delay(speed-deltatime); //延时speed ms
+   MIDImessage(noteOFF,note,velocity); 
+   delay(deltatime);
 }
 
 void play_per_Midi(int note,int duration_type , bool isDot ,int tempo)
@@ -53,7 +53,7 @@ void play_per_Midi(int note,int duration_type , bool isDot ,int tempo)
 	}
 	else
 	{
-		playMidi(note,duration +0.5* duration);
+	   playMidi(note,duration +0.5* duration);
 	}
 
 }
@@ -72,7 +72,7 @@ void play_Reset_Midi(int duration_type , bool isDot ,int tempo)
 	}
 	else
 	{
-		MIDImessage(noteOFF,C4,velocity); 
+	    MIDImessage(noteOFF,C4,velocity); 
 	    delay(duration + 0.5 * duration);
 	}
 
@@ -101,7 +101,7 @@ void loop()
 	play_per_Midi(C5,4,false,Tempo);//playMidi(72,400);
 	play_per_Midi(A04,2,false,Tempo);//playMidi(69,800);
 	play_per_Midi(A04,4,false,Tempo);//playMidi(69,400);
-    play_per_Midi(G4,2,false,Tempo);//playMidi(67,800);
+        play_per_Midi(G4,2,false,Tempo);//playMidi(67,800);
 	play_per_Midi(E4,4,false,Tempo);//playMidi(64,400);
 	play_per_Midi(E4,4,false,Tempo);//playMidi(64,400);
 	play_per_Midi(G4,4,false,Tempo);//playMidi(67,400);
@@ -117,7 +117,7 @@ void loop()
 	play_per_Midi(D5,4,false,Tempo);//playMidi(74,400);
 	play_per_Midi(D5,4,false,Tempo);//playMidi(74,400);
 	play_per_Midi(C5,4,false,Tempo);//playMidi(72,400);
-    play_per_Midi(D5,2,false,Tempo);//playMidi(74,800);
+        play_per_Midi(D5,2,false,Tempo);//playMidi(74,800);
 	play_per_Midi(C5,4,false,Tempo);//playMidi(72,400);
 	play_per_Midi(B4,2,false,Tempo);//playMidi(71,800);
 	play_per_Midi(B4,4,false,Tempo);//playMidi(71,400);
@@ -126,7 +126,7 @@ void loop()
 	play_per_Midi(A04,4,false,Tempo);//playMidi(69,400);
 	play_per_Midi(E5,2,true,Tempo);//playMidi(76,1200);
 	play_Reset_Midi(4,false,Tempo);//delay(400);
-    play_per_Midi(A04,4,false,Tempo);//playMidi(69,400);
+        play_per_Midi(A04,4,false,Tempo);//playMidi(69,400);
 	play_per_Midi(A04,4,false,Tempo);//playMidi(69,400);
 
 
@@ -136,7 +136,7 @@ void loop()
 	play_per_Midi(E5,4,false,Tempo);//playMidi(76,400);
 	play_per_Midi(E5,4,false,Tempo);//playMidi(76,400);
 	play_per_Midi(G5,4,false,Tempo);//playMidi(79,400);
-    play_per_Midi(G5,4,false,Tempo);//playMidi(79,400);
+        play_per_Midi(G5,4,false,Tempo);//playMidi(79,400);
 	play_per_Midi(E5,4,false,Tempo);//playMidi(76,400);
 	play_per_Midi(G5,4,false,Tempo);//playMidi(79,800);
 	play_per_Midi(C5,4,false,Tempo);//playMidi(72,400);
@@ -158,7 +158,7 @@ void loop()
 	play_per_Midi(D5,4,false,Tempo);//playMidi(74,400);
 	play_per_Midi(D5,4,false,Tempo);//playMidi(74,400);
 	play_per_Midi(C5,4,false,Tempo);//playMidi(72,400);
-    play_per_Midi(D5,2,false,Tempo);//playMidi(74,800);
+        play_per_Midi(D5,2,false,Tempo);//playMidi(74,800);
 	play_per_Midi(C5,4,false,Tempo);//playMidi(72,400);
 	play_per_Midi(B4,4,false,Tempo);//playMidi(71,400);
 	play_per_Midi(B4,4,false,Tempo);//playMidi(71,400);
